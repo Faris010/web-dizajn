@@ -2,11 +2,20 @@
     padding: 0;
     margin: 0;
   }
+  .header a{
+    text-decoration: none;
+    color: black;
+  }
+  .header a :hover{
+    text-decoration: none;
+    color: black;
+  }
   .header{
     height: 100px;
     width: 100%;
     background-color: rgba(165, 156, 156, 0.6);
     position: fixed;
+    z-index: 1000;
   }
   .header img{
     height: 90px;
@@ -30,7 +39,8 @@
   }
   .slika{
     width: 100%;
-    height: 1441px;
+    height: 100%;
+    background-color: rgb(30, 31, 32);
     background-image: url('./slika1');
     background-repeat: no-repeat;
     background-size: cover;
@@ -147,5 +157,30 @@
     font-weight: lighter;
   }
   .container {
-    padding-top: 40%;
+    padding-top: 35%;
+    display: flex;
+    width: 100%;
+  }
+  @media only screen and (min-width:401px) and (max-width:800px){
+    .container1 {
+      padding-left: 10%;
+      padding-top: 30%;
+    }
+    .container {
+      padding-top: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    ul{
+      display: none;
+    }
+    .header p{
+      padding-left: 20%;
+    }
+    .kartica{
+      width: 100%;
+    }
+
   }
