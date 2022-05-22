@@ -16,15 +16,11 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Add Food</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <form>
-            <div class="mb-3">
-                <label for="food-id" class="col-form-label">Id:</label>
-                <input type="text" class="form-control" id="food-id" disabled>
-              </div>
             <div class="mb-3">
               <label for="food-name" class="col-form-label">Name:</label>
               <input type="text" class="form-control" id="food-name">
@@ -41,17 +37,16 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" onclick="editFood()">Send message</button>
+          <button type="button" class="btn btn-primary" onclick="editFood()">Submit</button>
         </div>
       </div>
     </div>
-  </div>
-</div> -->
+  </div> -->
   <!---->
     <div class="slika">
     <div class="header">
         <p>Fast food</p>
-        <button>Add food</button>
+        <button id="add-food">Add food</button>
       </div>
       <div class="container1" id="Onama">
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
@@ -72,9 +67,27 @@
         <!--Footer-->
     </div>
     <div class="footer">
+    <div class="dialog-hid" id="dialog-hid">
+      <div class="dialog">
+        <div class="dialog-div">
+          <div class="dialog-header">
+            <p>Add Food</p>
+          </div>
+          <div class="dialog-content">
+            <input type="text" placeholder="Name" id="food-name">
+            <input type="text" placeholder="Image Url" id="food-imgUrl">
+            <input type="number" placeholder="Price" id="food-price">
+          </div>
+          <div class="dialog-action">
+            <button class="cancel" id="cancel-btn">Cancel</button>
+            <button class="submit" id="submit-btn" onclick="addFood()">Submit</button>
+          </div>
+        </div>
+      </div>
     </div>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
   </body>
-</html>   
+</html>

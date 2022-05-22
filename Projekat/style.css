@@ -182,6 +182,71 @@ h2 {
   display: flex;
   width: 100%;
 }
+.dialog-hid{
+  display: none;
+}
+.dialog{
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.9;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dialog-div{
+  height: 400px;
+  width: 500px;
+  background-color: white;
+  border-radius: 10px;
+}
+.dialog-header p{
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px 0;
+}
+.dialog-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialog-content input{
+  width: 400px;
+  height: 50px;
+  margin-bottom: 30px;
+}
+
+.dialog-content input::placeholder{
+  padding-left: 10px;
+}
+
+.dialog-action{
+  margin-right: 50px;
+}
+
+.dialog-action button{
+  padding: 10px 20px;
+  margin-left: 10px;
+  float: right;
+  border: none;
+  border-radius: 5px;
+}
+.submit{
+  background-color: #46C228;
+}
+.cancel{
+  background-color: #CA1D1D;
+}
+
+
+
 @media only screen and (max-width:700px){
   .container1 {
     padding-left: 10%;
