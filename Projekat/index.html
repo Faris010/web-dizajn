@@ -11,6 +11,43 @@
   <title>Document</title>
 </head>
 <body>
+  <!--Push-->
+  <!-- <div class="modal fade" id="edit-food" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+                <label for="food-id" class="col-form-label">Id:</label>
+                <input type="text" class="form-control" id="food-id" disabled>
+              </div>
+            <div class="mb-3">
+              <label for="food-name" class="col-form-label">Name:</label>
+              <input type="text" class="form-control" id="food-name">
+            </div>
+            <div class="mb-3">
+              <label for="food-image" class="col-form-label">Image:</label>
+              <input type="text" class="form-control" id="food-image">
+            </div>
+            <div class="mb-3">
+                <label for="food-price" class="col-form-label">Price:</label>
+                <input type="number" class="form-control" id="food-price">
+              </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="editFood()">Send message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+  <!---->
     <div class="slika">
     <div class="header">
         <a href="http://ptf.unze.ba/wp/wp-content/uploads/2018/02/Logo-PTF018.png" target="_blank"><img src="" alt=""></a>
@@ -30,46 +67,11 @@
           Contrary to popular belief, Lorem Ipsum is not simply random text. 
           It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, 
           a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, 
-          from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. 
-          Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, 
-          written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. 
-          The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+          from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
       </div>
     <!--Kartice-->
         <div class="wrapper-grey padded">
-          <div class="container">
-            <div class="col-xs-8 col-sm-4 kartica">
-                <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('./slika1');">
-                  <div class="card-description">
-                    <h2>Hamburger</h2>
-                  </div>
-                  <a class="card-link" href="#" ></a>
-                </div>
-              </div>
-              <div class="col-xs-8 col-sm-4">
-                <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/04/IMG_5589.jpg?w=1600&ssl=1');">
-                  <div class="card-description">
-                    <h2>home</h2>
-                  </div>
-                  <a class="card-link" href="#" ></a>
-                </div>
-              </div>
-              <div class="col-xs-8 col-sm-4">
-                <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/03/Positano-Weather.jpg?w=1600&ssl=1');">
-                  <div class="card-description">
-                    <h2>Home</h2>  
-                  </div>
-                  <a class="card-link" href="#" ></a>
-                </div>
-              </div>
-              <div class="col-xs-8 col-sm-4">
-                <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/04/IMG_5589.jpg?w=1600&ssl=1');">
-                  <div class="card-description">
-                    <h2>home</h2>
-                  </div>
-                  <a class="card-link" href="#" ></a>
-                </div>
-            </div>
+          <div class="container" id="foods-row">
           </div>
         </div>
         <!--Footer-->
@@ -80,4 +82,4 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
   </body>
-</html>       
+</html>     

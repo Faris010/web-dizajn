@@ -161,10 +161,13 @@
     display: flex;
     width: 100%;
   }
-  @media only screen and (min-width:401px) and (max-width:800px){
+  @media only screen and (max-width:900px){
     .container1 {
-      padding-left: 10%;
-      padding-top: 30%;
+    padding-top: 30%;
+    padding-right: 40%;
+    padding-left: 2%;
+    width: 530px;
+      
     }
     .container {
       padding-top: 90%;
@@ -177,10 +180,15 @@
       display: none;
     }
     .header p{
-      padding-left: 20%;
+      padding-left: 0%;
+
     }
     .kartica{
       width: 100%;
+      padding-top: 80%;
+      padding-right: 5%;
+      padding-left: 2%;
     }
+
 
   }

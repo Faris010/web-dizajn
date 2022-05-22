@@ -1,3 +1,81 @@
+const menu = document.querySelector('#mobile-menu');
+const menuLinks = document.querySelector('.navbar__menu');
+
+//mobitel
+const mobileMenu = () => {
+    menu.classList.toggle('is-active');
+    menuLinks.classList.toggle('active');
+}
+//menu.addEventListener('click', mobileMenu);
+
+const BASE_URL = 'https://ptf-web-dizajn-2022.azurewebsites.net/';
+
+let foods = [];
+
 fetch('https://ptf-web-dizajn-2022.azurewebsites.net/api/Food')
-    .then(response=> response.json())
-    .then(data=> console.log(data))
+    .then(res => res.json())
+    .then(data => {
+        renderFoods(data)
+        foods=data;
+    })
+
+
+const renderFoods = (foods) => {
+    const foodsRow = document.getElementById('foods-row');
+    let resultFoodsHtml = '';
+
+    foods.forEach(food => {
+        resultFoodsHtml += 
+        `<div class="col-xs-8 col-sm-4">
+            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('${food.imageUrl}');">
+                <div class="card-description">
+                    <h2>${food.name}</h2>
+                    <p>${food.price} KM</p>
+                </div>
+            </div>
+        </div>`
+    });
+
+    foodsRow.innerHTML = resultFoodsHtml;
+}
+
+const fillEditData = (foodId) => {
+    const food = foods.find(food => food.id === foodId);
+    const foodFormId = document.getElementById('food-id');
+    const foodFormName = document.getElementById('food-name');
+    const foodFormImage = document.getElementById('food-image');
+    const foodFormPrice = document.getElementById('food-price');
+
+    foodFormId.value = food.id;
+    foodFormName.value = food.name;
+    foodFormImage.value = food.imageUrl;
+    foodFormPrice.value = food.price;
+}
+
+const editFood = () => { 
+    const foodFormId = document.getElementById('food-id').value;
+    const foodFormName = document.getElementById('food-name').value;
+    const foodFormImage = document.getElementById('food-image').value;
+    const foodFormPrice = document.getElementById('food-price').value;
+
+    fetch(`${BASE_URL}/api/Food`, {
+        method: 'PUT', 
+        headers: new Headers({'content-type': 'application/json'}),
+        body: JSON.stringify({
+            id: foodFormId,
+            name: foodFormName,
+            imageUrl: foodFormImage,
+            price: foodFormPrice
+        })
+    })
+    .then(res => {
+        if (res.ok) {
+            console.log(`Status code: ${res.status}`);
+
+            let kartica = document.getElementById(foodFormId);
+            kartica.children[0].src = foodFormImage;
+            kartica.children[1].children[0].innerHTML = foodFormName;
+            kartica.children[1].children[1].innerHTML = foodFormPrice;
+        }
+    })
+}
